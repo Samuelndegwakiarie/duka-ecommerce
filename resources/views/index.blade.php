@@ -1,4 +1,4 @@
-@@extends('layouts.base')
+@extends('layouts.base')
 @section('content')
 <section class="pt-0 poster-section">
     <div class="poster-image slider-for custome-arrow classic-arrow">
@@ -2163,6 +2163,4 @@
         </div>
     </div>
 </section>
-
-
 @endsection
