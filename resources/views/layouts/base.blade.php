@@ -137,13 +137,13 @@
                                                     </span>
                                                 </div>
                                             </li>
-                                            <li><a href="index.htm" class="nav-link menu-title">Home</a></li>
-                                            <li><a href="shop.html" class="nav-link menu-title">Shop</a></li>
-                                            <li><a href="cart/list.html" class="nav-link menu-title">Cart</a></li>
-                                            <li><a href="about-us.html" class="nav-link menu-title">About Us</a></li>
-                                            <li><a href="contact-us.html" class="nav-link menu-title">Contact Us</a>
+                                            <li><a href="{{route ('app.index')}}" class="nav-link menu-title">Home</a></li>
+                                            <li><a href="{{route ('shop.index')}}" class="nav-link menu-title">Shop</a></li>
+                                            <li><a href="{{route ('cart/list.index')}}" class="nav-link menu-title">Cart</a></li>
+                                            <li><a href="{{route ('about-us.index')}}" class="nav-link menu-title">About Us</a></li>
+                                            <li><a href="{{route ('contact-us.index')}}" class="nav-link menu-title">Contact Us</a>
                                             </li>
-                                            <li><a href="blog.html" class="nav-link menu-title">Blog</a></li>
+                                            <li><a href="{{route ('blog.index')}}" class="nav-link menu-title">Blog</a></li>
                                         </ul>
                                     </div>
                                 </div>

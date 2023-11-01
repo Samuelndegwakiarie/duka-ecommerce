@@ -1,5 +1,5 @@
 @extends('layouts.base')
-@section('name')
+@section('content')
 <section class="breadcrumb-section section-b-space" style="padding-top:20px;padding-bottom:20px;">
     <ul class="circles">
         <li></li>
