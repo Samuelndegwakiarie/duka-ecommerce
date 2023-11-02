@@ -143,7 +143,7 @@
                                             <li><a href="about-us.html" class="nav-link menu-title">About Us</a></li>
                                             <li><a href="contact-us.html" class="nav-link menu-title">Contact Us</a>
                                             </li>
-                                            <li><a href="{{route ('blog.index')}}" class="nav-link menu-title">Blog</a></li>
+                                            <li><a href="blog.html" class="nav-link menu-title">Blog</a></li>
                                         </ul>
                                     </div>
                                 </div>
