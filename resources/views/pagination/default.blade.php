@@ -13,8 +13,7 @@
                         </li>   
                         @else
                         <li class="page-item">
-                            <a class="page-link" href="{{paginator->previousPageUrl()}}" aria-label="Previous"
-                                style="color:#6c757d;">
+                            <a class="page-link" href="{{paginator->previousPageUrl()}}" aria-label="Previous">
                                 <span aria-hidden="true">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
