@@ -1,5 +1,8 @@
+@if ($paginator->hasPages())  
  <nav class="page-section">
                     <ul class="pagination">
+
+                        @if ($paginator->onFirstPage())
                         <li class="page-item">
                             <a class="page-link" href="javascript:void(0)" aria-label="Previous"
                                 style="color:#6c757d;">
@@ -7,7 +10,19 @@
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                             </a>
+                        </li>   
+                        @else
+                        <li class="page-item">
+                            <a class="page-link" href="{{paginator->previousPageUrl()}}" aria-label="Previous"
+                                style="color:#6c757d;">
+                                <span aria-hidden="true">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                            </a>
                         </li>
+                        @endif
+                            
+                        
 
 
                         <li class="page-item active">
@@ -27,3 +42,4 @@
 
                     </ul>
                 </nav>
+                @endif
