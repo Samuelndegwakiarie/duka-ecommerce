@@ -527,7 +527,7 @@
 
 
                 </div>
-                {{$products->links()}}
+                {{$products->links("pagination.default")}}
                 
 
             </div>

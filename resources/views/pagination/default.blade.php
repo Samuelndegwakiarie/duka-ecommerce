@@ -13,7 +13,7 @@
                         </li>   
                         @else
                         <li class="page-item">
-                            <a class="page-link" href="{{paginator->previousPageUrl()}}" aria-label="Previous">
+                            <a class="page-link" href="{{$paginator->previousPageUrl()}}" aria-label="Previous">
                                 <span aria-hidden="true">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
@@ -45,7 +45,7 @@
                         
                         @if ($paginator->hasMorePages())
                         <li class="page-item">
-                            <a href="{{paginator->nextPageUrl()}}" class="page-link" aria-label="Next">
+                            <a href="{{$paginator->nextPageUrl()}}" class="page-link" aria-label="Next">
                                 <span aria-hidden="true">
                                     <i class="fas fa-chevron-right"></i>
                                 </span>
@@ -54,7 +54,7 @@
                             
                         @else
                         <li class="page-item  disabled">
-                            <a href="javascript:void(0)" class="page-link" aria-label="Next">
+                            <a href="javascript:void(0)" class="page-link" aria-label="Next" style="color:#6c757d;" >
                                 <span aria-hidden="true">
                                     <i class="fas fa-chevron-right"></i>
                                 </span>
