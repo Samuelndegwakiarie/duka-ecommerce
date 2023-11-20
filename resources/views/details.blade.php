@@ -49,10 +49,19 @@
                                             <img src="{{asset('assets/images/fashion/product/front')}}/{{$product->image}}"
                                                 class="img-fluid blur-up lazyload" alt="{{$product->name}}">
                                         </div>
-                                        <div>
-                                            <img src="../assets/images/fashion/2.jpg"
-                                                class="img-fluid blur-up lazyload" alt="">
-                                        </div>
+                                        @if ($product->images)
+                                        @php
+                                            $images = explode(',',$product->images);
+                                        @endphp 
+                                        @foreach ($images as $image)
+                                            <div>
+                                                <img src="../assets/images/fashion/2.jpg"
+                                                    class="img-fluid blur-up lazyload" alt="">
+                                            </div>
+                                        @endforeach   
+                                            
+                                        @endif
+                                        
                                         <div>
                                             <img src="../assets/images/fashion/3.jpg"
                                                 class="img-fluid blur-up lazyload" alt="">
@@ -66,8 +75,7 @@
                                 <div class="col-lg-10">
                                     <div class="details-image-1 ratio_asos">
                                         <div>
-                                            <img src="{{asset('assets/images/fashion/product/front')}}/{{$product->image}} " id="zoom_01"
-                                                data-zoom-image="assets/images/fashion/1.jpg"
+                                            <img src="{{asset('assets/images/fashion/product/front')}}/{{$product->image}} " 
                                                 class="img-fluid w-100 image_zoom_cls-0 blur-up lazyload" alt="{{$product->name}}">
                                         </div>
                                         <div>
