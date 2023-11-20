@@ -19,16 +19,15 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3>Autem Repudiandae Accusantium Blanditiis</h3>
+                <h3>{{$product->name}}</h3>
                 <nav>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="../index.htm">
+                            <a href="{{route('app.index')}}">
                                 <i class="fas fa-home"></i>
                             </a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Autem Repudiandae Accusantium
-                            Blanditiis</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{$product->name}}</li>
                     </ol>
                 </nav>
             </div>
@@ -111,7 +110,7 @@
                                 </div>
 
                                 <div class="details-image-concept">
-                                    <h2>Autem Repudiandae Accusantium Blanditiis</h2>
+                                    <h2>{{$product->name}} </h2>
                                 </div>
 
                                 <div class="label-section">
@@ -119,7 +118,18 @@
                                     <span class="label-text">in fashion</span>
                                 </div>
 
-                                <h3 class="price-detail">$13 <del>$459.00</del><span>55% off</span></h3>
+                                <h3 class="price-detail">
+                                    @if ($product->sale_price)
+                                        ${{$product->sale_price}}
+                                    <del>${{$product->regular_price}}</del><span>
+                                        {{round((($product->regular_price - $product->sale_price)/$product->regular_price)*100) }} 
+                                        % off</span></h3>    
+                                        
+                                    @else
+                                        {{product->regular_price}}
+                                        
+                                    @endif
+                                   
 
                                 <div class="color-image">
                                     <div class="image-select">
@@ -314,82 +324,7 @@
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="desc">
                             <div class="shipping-chart">
-                                <div class="part">
-                                    <h4 class="inner-title mb-2">Give you a complete account of the system</h4>
-                                    <p class="font-light">Nor again is there anyone who loves or pursues or desires
-                                        to
-                                        obtain pain of itself, because it is pain, but because occasionally
-                                        circumstances occur in which toil and pain can procure him some great
-                                        pleasure.
-                                        To take a trivial example, which of us ever undertakes laborious physical
-                                        exercise, except to obtain some advantage from it? But who has any right to
-                                        find
-                                        fault with a man who chooses to enjoy a pleasure that has no annoying
-                                        consequences, or one who avoids a pain that produces no resultant pleasure.
-                                    </p>
-                                </div>
-
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-lg-8">
-                                        <p class="font-light">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                            elit.
-                                            Ab, autem nemo? Tempora vitae assumenda laudantium unde magni, soluta
-                                            repudiandae quam, neque voluptate deleniti consequatur laboriosam
-                                            veritatis?
-                                            Tempore dolor molestias voluptatum! Minima possimus, pariatur sed, quasi
-                                            provident dolorum unde molestias, assumenda consequuntur odit magni
-                                            blanditiis obcaecati? Ea corporis odit dolorem fuga, fugiat soluta
-                                            consequuntur magni.</p>
-
-                                        <div class="part mt-3">
-                                            <h5 class="inner-title mb-2">fabric:</h5>
-                                            <p class="font-light">Art silk is manufactured by synthetic fibres like
-                                                rayon. It's light in weight and is soft on the skin for comfort in
-                                                summers.Art silk is manufactured by synthetic fibres like rayon.
-                                                It's
-                                                light in weight and is soft on the skin for comfort in summers.</p>
-                                            <p class="font-light">Lorem Ipsum is simply dummy text of the printing
-                                                and typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4">
-                                        <img src="../assets/images/fashion/slider/1.jpg"
-                                            class="img-fluid rounded blur-up lazyload" alt="">
-                                    </div>
-
-                                    <div class="col-lg-8 order-lg-2 mt-4">
-                                        <p class="font-light">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                            elit.
-                                            Ab, autem nemo? Tempora vitae assumenda laudantium unde magni, soluta
-                                            repudiandae quam, neque voluptate deleniti consequatur laboriosam
-                                            veritatis?
-                                            Tempore dolor molestias voluptatum! Minima possimus, pariatur sed, quasi
-                                            provident dolorum unde molestias, assumenda consequuntur odit magni
-                                            blanditiis obcaecati? Ea corporis odit dolorem fuga, fugiat soluta
-                                            consequuntur magni.</p>
-                                        <div class="part mt-3">
-                                            <p class="font-light">Lorem ipsum, dolor sit amet consectetur
-                                                adipisicing
-                                                elit. Odio repellat numquam perspiciatis eum quis ab, sed dicta
-                                                tenetur
-                                                fugit culpa, aut distinctio deserunt quisquam ipsam reprehenderit
-                                                iure?
-                                                Adipisci, optio enim? Voluptates voluptatum neque id ad commodi
-                                                quisquam
-                                                dolorem vitae inventore quasi! Officiis facere, iusto tempore atque
-                                                magnam voluptas. Architecto laboriosam deleniti hic veritatis
-                                                nesciunt.
-                                                Aut officia quasi inventore et. Debitis.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 order-lg-0 mt-4">
-                                        <img src="../assets/images/fashion/slider/2.jpg"
-                                            class="img-fluid rounded blur-up lazyload" alt="">
-                                    </div>
-                                </div>
+                                {{product->description}}
                             </div>
                         </div>
 
