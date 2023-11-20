@@ -46,8 +46,8 @@
                                 <div class="col-lg-2">
                                     <div class="details-image-vertical black-slide rounded">
                                         <div>
-                                            <img src="../assets/images/fashion/product/front/1.jpg"
-                                                class="img-fluid blur-up lazyload" alt="">
+                                            <img src="{{asset('assets/images/fashion/product/front')}}/{{$product->image}}"
+                                                class="img-fluid blur-up lazyload" alt="{{$product->name}}">
                                         </div>
                                         <div>
                                             <img src="../assets/images/fashion/2.jpg"
@@ -66,9 +66,9 @@
                                 <div class="col-lg-10">
                                     <div class="details-image-1 ratio_asos">
                                         <div>
-                                            <img src="../assets/images/fashion/product/front/1.jpg" id="zoom_01"
+                                            <img src="{{asset('assets/images/fashion/product/front')}}/{{$product->image}} " id="zoom_01"
                                                 data-zoom-image="assets/images/fashion/1.jpg"
-                                                class="img-fluid w-100 image_zoom_cls-0 blur-up lazyload" alt="">
+                                                class="img-fluid w-100 image_zoom_cls-0 blur-up lazyload" alt="{{$product->name}}">
                                         </div>
                                         <div>
                                             <img src="../assets/images/fashion/2.jpg" id="zoom_02"
@@ -232,7 +232,7 @@
                                 <ul class="product-count shipping-order">
                                     <li>
                                         <img src="../assets/images/gif/truck.png" class="img-fluid blur-up lazyload"
-                                            alt="image">
+                                            alt="image">   
                                         <span class="lang">Free shipping for orders above $500 USD</span>
                                     </li>
                                 </ul>
