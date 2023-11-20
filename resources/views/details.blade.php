@@ -238,8 +238,14 @@
                                 </ul>
 
                                 <div class="mt-2 mt-md-3 border-product">
-                                    <h6 class="product-title hurry-title d-block">Hurry Up! Left <span>10</span> in
-                                        stock</h6>
+                                    <h6 class="product-title hurry-title d-block">
+                                        @if ($product->stock_status== 'instock')
+                                            Instock
+                                            
+                                        @else
+                                            Out of stock
+                                        @endif
+                                    </h6>
                                     <div class="progress">
                                         <div class="progress-bar" role="progressbar" style="width: 78%"></div>
                                     </div>
