@@ -118,7 +118,7 @@
                                         % off</span></h3>    
                                         
                                     @else
-                                        {{product->regular_price}}
+                                        {{$product->regular_price}}
                                         
                                     @endif
                                    
@@ -322,7 +322,7 @@
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="desc">
                             <div class="shipping-chart">
-                                {{product->description}}
+                                {{$product->description}}
                             </div>
                         </div>
 
